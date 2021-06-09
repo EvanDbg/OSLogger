@@ -55,7 +55,7 @@ if (isOSLoggerPresented && format) {
 
     NSString *iLogArgs = [[NSString alloc] initWithFormat:format arguments:ap];
 
-    if (isRecording)
+    if (isRecording && [iLogArgs containsString:@"ELog"])
     [[NSNotificationCenter defaultCenter] postNotificationName:@"OSLoggerNotification" object:iLogArgs];
 
     va_end(ap);

@@ -41,7 +41,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @property (nonatomic, strong) NSString *ImageFullPath;
 
-+(UIMenu *) InitMenuOnButton:(UIButton *)Button MenuTitles:(NSArray *)MenuTitles ActionsTitles:(NSArray *)ActionsTitles ImagesNames:(NSArray *)ImagesNames Target:(id)Target Action:(SEL)Action handler:(void(^_Nullable)(NSString *ButtonTitle))handler;
+// +(UIMenu *) InitMenuOnButton:(UIButton *)Button MenuTitles:(NSArray *)MenuTitles ActionsTitles:(NSArray *)ActionsTitles ImagesNames:(NSArray *)ImagesNames Target:(id)Target Action:(SEL)Action handler:(void(^_Nullable)(NSString *ButtonTitle))handler;
 
 +(NSString *) RunCMDWithLog:(NSString *)RunCMDWithLog;
 

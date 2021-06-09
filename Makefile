@@ -1,6 +1,4 @@
-ARCHS = arm64e arm64 armv7 armv7s
-
-THEOS_DEVICE_IP = 192.168.1.40
+ARCHS = arm64e arm64
 
 DEBUG = 0
 

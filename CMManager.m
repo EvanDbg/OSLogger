@@ -13,39 +13,39 @@
 @implementation CMManager
 
 
-+(UIMenu *) InitMenuOnButton:(UIButton *)Button MenuTitles:(NSArray *)MenuTitles ActionsTitles:(NSArray *)ActionsTitles ImagesNames:(NSArray *)ImagesNames Target:(id)Target Action:(SEL)Action handler:(void(^_Nullable)(NSString *ButtonTitle))handler {
+// +(UIMenu *) InitMenuOnButton:(UIButton *)Button MenuTitles:(NSArray *)MenuTitles ActionsTitles:(NSArray *)ActionsTitles ImagesNames:(NSArray *)ImagesNames Target:(id)Target Action:(SEL)Action handler:(void(^_Nullable)(NSString *ButtonTitle))handler {
         
-    UIMenu *Menu = [UIMenu alloc];
-    NSMutableArray *Obj = [[NSMutableArray alloc] init];
+//     UIMenu *Menu = [UIMenu alloc];
+//     NSMutableArray *Obj = [[NSMutableArray alloc] init];
     
-    for (CFIndex iCounter = 0; iCounter < ActionsTitles.count; iCounter ++) {
+//     for (CFIndex iCounter = 0; iCounter < ActionsTitles.count; iCounter ++) {
 
-    for (NSString *EachImageName in ImagesNames) {
+//     for (NSString *EachImageName in ImagesNames) {
         
-    UIAction *Action0 = [UIAction actionWithTitle:[ActionsTitles objectAtIndex:iCounter] image:[UIImage imageNamed:EachImageName] identifier:[ActionsTitles objectAtIndex:iCounter] handler:^(__kindof UIAction * _Nonnull action) {
+//     UIAction *Action0 = [UIAction actionWithTitle:[ActionsTitles objectAtIndex:iCounter] image:[UIImage imageNamed:EachImageName] identifier:[ActionsTitles objectAtIndex:iCounter] handler:^(__kindof UIAction * _Nonnull action) {
 
-           handler(action.title);
-    }];
+//            handler(action.title);
+//     }];
         
-    [Obj addObject:Action0];
+//     [Obj addObject:Action0];
         
-    }
+//     }
 
-    }
+//     }
     
-    for  (NSString *EachMenuTitle in MenuTitles) {
+//     for  (NSString *EachMenuTitle in MenuTitles) {
         
-    Menu = [UIMenu menuWithTitle:EachMenuTitle children:[NSArray arrayWithArray:Obj]];
+//     Menu = [UIMenu menuWithTitle:EachMenuTitle children:[NSArray arrayWithArray:Obj]];
     
-    Button.menu = Menu;
-    Button.showsMenuAsPrimaryAction = YES;
-    [Button addTarget:Target action:Action forControlEvents:UIControlEventAllEvents];
+//     Button.menu = Menu;
+//     Button.showsMenuAsPrimaryAction = YES;
+//     [Button addTarget:Target action:Action forControlEvents:UIControlEventAllEvents];
 
-    return Menu;
-    }
+//     return Menu;
+//     }
     
-    return Menu;
-}
+//     return Menu;
+// }
  
 
 +(void) InitAlertWithTitle:(NSString *_Nullable)Title Message:(NSString *_Nullable)Message Buttons:(NSArray *_Nullable)Buttons CancelButtonTitle:(NSString *_Nullable)CancelButtonTitle AlertStyle:(UIAlertControllerStyle)AlertStyle handler:(void(^_Nullable)(NSString * _Nullable ButtonTitle, NSUInteger index))handler {
